@@ -29,9 +29,23 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                         startActivity(intent);
                     }
-                } else {
-                    Toast.makeText(MainActivity.this, "incorrect password..... ", Toast.LENGTH_SHORT).show();
+                    else{
+                        Toast.makeText(MainActivity.this, "incorrect password..... ", Toast.LENGTH_SHORT).show();
+                    }
                 }
+                else {
+                    Toast.makeText(MainActivity.this, "incorrect username..... ", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        Button bt_cn_account = findViewById(R.id.button1);
+        bt_cn_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(MainActivity.this,CreateNewAccount.class);
+                startActivity(intent);
+
             }
         });
 
